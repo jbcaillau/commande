@@ -1,0 +1,178 @@
+% Written on Mon 21 Sep 2020 12:35:52 CEST
+% by Jean-Baptiste Caillau, Univ. Cote d'Azur & CNRS/Inria
+\documentclass[11pt,a4paper]{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{tp}
+\def\N{\mathbf{N}}
+\def\Z{\mathbf{Z}}
+\def\Q{\mathbf{Q}}
+\def\R{\mathbf{R}}
+\def\C{\mathbf{C}}
+\def\T{\mathbf{T}}
+\def\K{\mathbf{K}}
+\def\L{\mathrm{L}}
+\def\H{\mathrm{H}}
+\def\W{\mathrm{W}}
+\def\M{\mathrm{M}}
+\def\O{\mathrm{O}}
+\def\Im{\mathrm{Im}}
+\def\Vect{\mathrm{Vect}}
+\def\Min{\mathrm{Min}}
+\def\BV{\mathrm{BV}}
+\def\Isom{\mathrm{Isom}}
+\def\iy{\infty}
+\def\d{\mathrm{d}}
+\def\t{\ \!^t\!}
+\def\tr{\mathrm{tr}}
+\def\veps{\varepsilon}
+\def\vphi{\varphi}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\noi{\noindent}
+\def\cf{\emph{cf.}}
+\def\ie{\emph{i.e.}}
+\def\etc{\emph{etc.}}
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\hat}{\widehat}
+\theoremstyle{plain}
+\newtheorem{thrm}{Th\'eor\`eme}[section]
+\newtheorem{prpstn}{Proposition}[section]
+\newtheorem{lmm}{Lemme}[section]
+\newtheorem{crllr}{Corollaire}[section]
+\newtheorem{dfntn}{D\'efinition}[section]
+\theoremstyle{definition}
+\newtheorem{rmrk}{Remarque}[section]
+
+\title{Commande optimale}
+\shorttitle{Plan du cours}
+\numero{Plan du cours}
+\date{2020--2021}
+\discipline{Commande optimale}
+\promotion{Polytech Nice-Sophia --- MAM5-INUM}
+
+\begin{document}
+\maketitle
+
+\section*{I. Contr\^ole optimal des EDO}
+
+\paragraph{1. Position du probl\`eme}
+\begin{itemize}
+  \item exemple en temps minimum
+  \item co\^ut de Lagrange
+  \item co\^uts de Mayer et Bolza
+\end{itemize}
+
+\paragraph{2. Principe du maximum de Pontrjagin}
+\begin{itemize}
+  \item \'enonc\'e du r\'esultat
+  \item conditions de transversalit\'e
+  \item exemples
+\end{itemize}
+
+\paragraph{3. Preuve du PMP}
+\begin{itemize}
+  \item PMP faible
+  \item constance du hamiltonien le long de l'extr\'emale
+\end{itemize}
+
+\paragraph{4. Cas lin\'eaire quadratique}
+
+\begin{itemize}
+  \item position du probl\`eme
+  \item caract\'erisation de la solution
+  \item \'equation de Ricatti
+  \item tracking
+\end{itemize}
+
+\section*{II. Introduction au contr\^ole des EDP} 
+
+\paragraph{1. Rappels sur les espaces de Hilbert} 
+
+\begin{itemize}
+  \item th\'eor\`emes de la projection, de Riesz
+  \item th\'eor\`emes de Lions-Stampacchia et Lax-Milgram
+\end{itemize}
+
+\paragraph{2. EDP elliptiques (1/2)~: contr\^ole distribu\'e} 
+
+\begin{itemize}
+  \item formulation variationnelle de l'EDP
+  \item existence et unicit\'e de solution
+  \item caract\'erisation de la solution et syst\`eme adjoint
+  \item approximation num\'erique
+\end{itemize}
+
+\paragraph{3. EDP elliptiques (2/2)~: contr\^ole fronti\`ere} 
+
+\begin{itemize}
+  \item formulation variationnelle de l'EDP
+  \item existence et unicit\'e de solution
+  \item caract\'erisation de la solution et syst\`eme adjoint
+  \item approximation num\'erique
+\end{itemize}
+
+\section*{III. Apprentissage par renforcement}
+
+\paragraph{1. Model based reinforcement learning} 
+\begin{itemize}
+  \item contr\^ole optimal stochastique discret
+  \item approximation de la dynamique
+\end{itemize}
+
+\paragraph{2. Approximate dynamics programming} 
+\begin{itemize}
+  \item notion de $Q$-fonction
+  \item principe de Bellman, $Q$-learning 
+  \item lien avec le contr\^ole en temps continu dans le cas LQR
+\end{itemize}
+
+\paragraph{3. Direct policy search} 
+\begin{itemize}
+  \item politiques al\'eatoires
+  \item approche "sample to optimize"
+\end{itemize}
+
+\paragraph{Organisation et intervenant}
+
+\begin{itemize}
+  \item 9 s\'eances de 3H
+  \item J.-B.~Caillau (\verb+jean-baptiste.caillau@univ-cotedazur.fr+)
+\end{itemize}
+
+\paragraph{\'Evaluation}
+\begin{itemize}
+  \item 1 EX partiel (coeff.~1)
+  \item 1 EX terminal (coeff.~1)
+\end{itemize}
+
+\paragraph{Bibliographie}
+\begin{enumerate}
+%\item Agrachev, A.; Sachkov, Y.
+%\emph{Control theory from the geometric viewpoint},
+%Encyclop\ae dia of Mathematical Sciences \textbf{87}, Springer, 2004.
+\item Blum, J.
+\emph{Commande optimale}, Notes de cours Polytech Nice-Sophia, 2016.
+\item Evans, L.~C.
+\emph{An introduction to mathematical optimal control theory}, Univ. California, 2008.
+\item Fleming, W.~H.; Rishel, R.~W.
+\emph{Deterministic and stochastic optimal control}, Springer, 1975.
+\item Gardner, M.
+\emph{The unexpected hanging and other mathematical diversions},
+University of Chicago Press, 1991.
+\item Recht, B.
+A tour of reinforcement learning: the view from continuous control.
+arXiv:1806.09460, 2018.
+\item Sutton, R.~S.; Barto, A.~G.
+\emph{Reinforcement learning: an introduction}, MIT press, 2018.
+\item Tr\'elat, E.
+\emph{Contr\^ole optimal, th\'eorie et applications}, Vuibert, 2005.
+
+\end{enumerate}
+
+\vfill \begin{flushright}{\footnotesize \emph{En ligne sous}
+\texttt{caillau.perso.math.cnrs.fr/commande-mam5}} \end{flushright}
+\end{document}

@@ -1,0 +1,12 @@
+name: mi1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - jupyterlab
+  - cmake
+  - nutopy
+  - bocop

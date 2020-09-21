@@ -1,0 +1,268 @@
+% Written on Mon 10 Feb 2020 06:46:39 CET
+% by Jean-Baptiste Caillau, Universite Cote d'Azur, CNRS, Inria, LJAD
+\documentclass[11pt,a4paper]{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{wasysym}
+\usepackage{tp}
+\usepackage{version}
+\def\N{\mathbf{N}}
+\def\Z{\mathbf{Z}}
+\def\Q{\mathbf{Q}}
+\def\R{\mathbf{R}}
+\def\C{\mathbf{C}}
+\def\T{\mathbf{T}}
+\def\K{\mathbf{K}}
+\def\L{\mathrm{L}}
+\def\H{\mathrm{H}}
+\def\W{\mathrm{W}}
+\def\M{\mathrm{M}}
+\def\O{\mathrm{O}}
+\def\CC{\mathscr{C}}
+\def\Im{\mathrm{Im}}
+\def\Vect{\mathrm{Vect}}
+\def\Min{\mathrm{Min}}
+\def\BV{\mathrm{BV}}
+\def\Isom{\mathrm{Isom}}
+\def\iy{\infty}
+\def\d{\mathrm{d}}
+\def\t{\ \!^t\!}
+\def\tr{\mathrm{tr}}
+\def\veps{\varepsilon}
+\def\vphi{\varphi}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\noi{\noindent}
+\def\cf{\emph{cf.}}
+\def\ie{\emph{i.e.}}
+\def\etc{\emph{etc.}}
+\newcommand{\frp}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\frpp}[2]{{\partial #1}/{\partial #2}}
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\hat}{\widehat}
+\theoremstyle{plain}
+\newtheorem{thrm}{Th\'eor\`eme}[section]
+\newtheorem{prpstn}{Proposition}[section]
+\newtheorem{lmm}{Lemme}[section]
+\newtheorem{crllr}{Corollaire}[section]
+\newtheorem{dfntn}{D\'efinition}[section]
+\theoremstyle{definition}
+\newtheorem{rmrk}{Remarque}[section]
+
+%\excludeversion{corr}
+\includeversion{corr}
+
+\title{Examen}
+\shorttitle{Examen}
+\numero{Examen}
+\date{2019--2020}
+\discipline{Commande optimale}
+\promotion{Polytech Nice-Sophia --- MAM5-INUM}
+
+\begin{document}
+\maketitle
+
+{\bf Dur\'ee 2H. Tous les exercices sont ind\'ependants.
+Le bar\`eme pr\'e\-vi\-sion\-nel est indiqu\'e pour chaque exercice.
+%Rendre sur des copies s\'epar\'ees l'exercice 1 d'une part, les exercices 2 et 3
+%d'autre part.
+Documents autoris\'es.}%~: une feuille de notes de cours recto-verso manuscrite.}
+
+% Exercice 1
+\begin{Exercice}[8 points] On consid\`ere le probl\`eme \`a temps final $t_f>0$ fix\'e
+\[ -q^2(t_f)+\int_0^{t_f} u^2(t)\,\d t \to \min \]
+pour la dynamique
+\[ \ddot{q}(t)=u(t),\quad t \in [0,t_f], \]
+o\`u $q(t)$ et $u(t)$ sont dans $\R$, et o\`u $q(0)=\dot{q}(0)=0$ sont
+fix\'es. On laisse $q(t_f)$ et $\dot{q}(t_f)$ libres.
+\begin{Question} Mettre la dynamique sous la forme $\dot{x}(t)=f(x(t),u(t))$ avec $f$
+que l'on pr\'ecisera.
+\end{Question}
+\begin{corr} $\RHD$ $f(x,u)=(x_2,u)$
+\end{corr}
+
+\begin{Question} Mettre le co\^ut sous forme de Lagrange avec $f^0$ que l'on
+pr\'ecisera. [Nota bene~: $(\d /\d t)(q^2)=2q\dot{q}$]
+\end{Question}
+\begin{corr} $\RHD$ $f^0(x,u)=-2x_1x_2+u^2$ 
+\end{corr}
+
+\begin{Question} Donner le hamiltonien du probl\`eme. (En l'absence de contrainte
+terminale, on pourra poser $p^0=-1/2$.)
+\end{Question}
+\begin{corr} $\RHD$ $H(x,p,u)=x_1x_2-u^2/2+p_1x_2+p_2u$
+\end{corr}
+
+\begin{Question} D\'eterminer le syst\`eme adjoint.
+\end{Question}
+\begin{corr} $\RHD$ $\dot{p}_1=-x_2$, $\dot{p}_2=-x_1-p_1$
+\end{corr}
+
+\begin{Question} \'Ecrire les conditions de transversalit\'e. 
+\end{Question}
+\begin{corr} $\RHD$ $p_1(t_f)=p_2(t_f)=0$
+\end{corr}
+
+\begin{Question} D\'eterminer le contr\^ole en fonction de l'\'etat et de l'\'etat
+adjoint \`a l'aide de la condition de maximisation.
+\end{Question}
+\begin{corr} $\RHD$ $u(t)=p_2(t)$
+\end{corr}
+
+\begin{Question} En d\'eduire le contr\^ole optimal.
+\end{Question}
+\begin{corr} $\RHD$ On voit que $\ddot{p}_2=-\dot{x}_1-\dot{p}_1=-x_2+x_2=0$, d'o\`u
+l'on d\'eduit que $p_2$, et donc $u$, sont des fonctions affines. Comme $p_2(t_f)=0$, il
+existe $a \in \R$ tel que $u(t)=a(t_f-t)$.
+\end{corr}
+
+\begin{Question} Soit $a \in \R$ une constante, calculer le co\^ut associ\'e au
+contr\^ole $u(t)=a(t_f-t)$. Que peut-on en conclure~?
+\end{Question}
+\begin{corr} $\RHD$ $q(t_f)=at_f^3/3$, que l'on peut rendre arbitrairement petit en
+choisissant $a$ n\'egatif. On en d\'eduit que le probl\`eme ne poss\`ede pas de
+solution.
+\end{corr}
+
+\end{Exercice}
+
+% Exercice 2
+\begin{Exercice}[6 points] On consid\`ere le probl\`eme \`a temps final $t_f>0$ fix\'e
+\[ \int_0^{t_f} (x_2^2(t)+u_1^2(t)+u_2^2(t))\,\d t \to \min \]
+pour la dynamique
+\[ \dot{x}_1(t)=-x_2(t)+u_2(t),\quad
+   \dot{x}_2(t)= x_1(t)-u_1(t),\quad t \in [0,t_f], \]
+o\`u $x(t)$ et $u(t)$ sont dans $\R^2$, et o\`u $x(0)=x_0$ est fix\'e. On laisse
+$x(t_f)$ libre.
+\begin{Question} Mettre le probl\`eme sous la forme
+\[ \int_0^{t_f} \left[ (Cx(t)|x(t))+(Du(t)|u(t)) \right]\,\d t \to \min, \]
+\[ \dot{x}(t) = Ax(t)+Bu(t), \]
+avec $A$, $B$, $C$ et $D$ que l'on pr\'ecisera. 
+\end{Question}
+\begin{corr} $\RHD$
+\[ A(t) = \left[ \begin{array}{rr}
+  0 & -1\\
+  1 & 0 \end{array} \right],\quad
+   B(t) = \left[ \begin{array}{rr}
+  0 & 1\\
+ -1 & 0 \end{array} \right], \]
+\[ C(t) = \left[ \begin{array}{rr}
+  0 & 0\\
+  0 & 1 \end{array} \right],\quad
+   D(t) = \left[ \begin{array}{rr}
+  1 & 0\\
+  0 & 1 \end{array} \right]. \]
+\end{corr}
+
+\begin{Question} Donner le hamiltonien du probl\`eme. (En l'absence de contrainte
+terminale, on pourra poser $p^0=-1/2$.)
+\end{Question}
+\begin{corr} $\RHD$ $H(x,p,u)=(-1/2)(x_2^2+u_1^2+u_2^2)+p_1(-x_2+u_2)+p_2(x_1-u_1)$
+\end{corr}
+
+\begin{Question} D\'eterminer le syst\`eme adjoint.
+\end{Question}
+\begin{corr} $\RHD$ $\dot{p}_1=-p_2$, $\dot{p}_2=x_2+p_1$
+\end{corr}
+
+\begin{Question} \'Ecrire les conditions de transversalit\'e. 
+\end{Question}
+\begin{corr} $\RHD$ $p_1(t_f)=p_2(t_f)=0$
+\end{corr}
+
+\begin{Question} D\'eterminer le contr\^ole en fonction de l'\'etat et de l'\'etat
+adjoint \`a l'aide de la condition de maximisation.
+\end{Question}
+\begin{corr} $\RHD$ $u(t)=(-p_2(t),p_1(t))$
+\end{corr}
+
+\begin{Question} On sait que le contr\^ole optimal s'\'ecrit sous la
+forme $u(t)=K(t)x(t)$ o\`u $K(t)$ est une matrice qui s'exprime en fonction de la
+solution d'une \'equation de Riccati~: expliciter cette \'equation de Riccati.
+[On ne demande pas de la r\'esoudre.] Que devient l'expression du contr\^ole optimal
+quand $t_f \to \iy$~?
+\end{Question}
+\begin{corr} $\RHD$ $K(t)=D^{-1}(t)\t B(t)R(t)$ avec
+\[ \dot{R}(t)=C-\t AR(t)-R(t)A-R(t)BD^{-1}\t BR(t),\quad
+   R(t_f)=0. \]
+Quand $t_f \to \iy$, le contr\^ole tend vers le contr\^ole \`a horizon infini dont
+l'expression est $u(t)=Kx(t)$ $R$ o\`u $K=D^{-1}\t BR$ et o\`u $R$ est
+solution de l'\'equation de Riccati alg\'ebrique (stationnarit\'e)
+\[ 0 = C-\t AR-RA-RBD^{-1}\t BR, \]
+soit ici $0=C+AR-RA-R^2$.
+\end{corr}
+
+\end{Exercice}
+
+% Exercice 3
+\begin{Exercice}[6 points]
+
+\begin{Question} Dans le code \verb+bsbfun.m+, entourer la ou les lignes
+o\`u sont calcul\'ees les dur\'ees de chaque arc bang.
+\end{Question}
+\begin{corr} $\RHD$ Voir code joint.
+\end{corr}
+
+\begin{Question} Dans le code \verb+bsbfun.m+, la dur\'ee de l'arc singulier est
+calcul\'ee selon
+\begin{verbatim}
+s = abs(z2-z1) / abs(exp(1i*ths)+w);
+\end{verbatim}
+Justifier ce calcul.
+\end{Question}
+\begin{corr} $\RHD$ Le long de l'arc singulier, le contr\^ole est nul,
+$\theta(t)=\theta_s$ est constant donc, en int\'egrant,
+\[ z_2=z_1+s\cdot e^{i\theta_s} \]
+o\`u $s$ est la dur\'ee de l'arc.
+\end{corr}
+
+\begin{Question} Dans le code \verb+game.m+, entourer la ou les expressions qui
+d\'etectent l'absence de coup possible pour la machine.
+\end{Question}
+\begin{corr} $\RHD$ Voir code joint.
+\end{corr}
+
+\begin{Question} On consid\`ere une partie d'Hexapawn pendant laquelle la machine
+vient de jouer le coup ci-dessous~:
+\begin{verbatim}
+[ 0 2 0         [ 0 0 0 
+  2 1 1   ---->   2 1 2
+  0 0 0 ]         0 0 0 ]
+\end{verbatim}
+La liste de coups de la machine associ\'ee \`a l'\'etat pr\'ec\'edent (avant son
+dernier coup) est 
+\begin{verbatim}
+{ [ 2 1   , [ 1 2
+    3 1 ]     2 3 ] }
+\end{verbatim}
+Comment cette liste doit-elle \^etre mise \`a jour par renforcement~?
+\end{Question}
+\begin{corr} La machine perd imm\'ediatement puisque le seul contr\^ole admissible
+pour son adversaire, 
+\begin{verbatim}
+[ 2 2
+  1 2 ]
+\end{verbatim}
+le fait gagner. Le dernier coup jou\'e par la machine est donc supprim\'e par le
+renforcement de sorte que la liste de coups devient
+\begin{verbatim}
+{ [ 2 1
+    3 1 ] }
+\end{verbatim}
+qui, de fait, conduit \`a une victoire de la machine.
+\end{corr}
+
+\end{Exercice}
+
+\end{document}
+
+\begin{Exercice}
+\begin{Question}
+\end{Question}
+\begin{corr}
+\end{corr}
+\end{Exercice}
+%\end{Exercice} \vspace*{1em}
