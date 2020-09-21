@@ -6,6 +6,6 @@
 
 [Plan du cours](cm/cm.pdf)
 
-[Exam CC (2019-20)](exam-cc1-old/exam-cc1.pdf)
+[Exam CC (2019-20)](exam-cc-old/exam-cc.pdf)
 
 [Exam (2019-20)](exam-old/exam.pdf)
