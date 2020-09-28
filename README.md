@@ -1,5 +1,6 @@
 ![PNS](logo-pns.png)
-## MAM5 - Commande optimale
+## MAM5-INUM
+# Commande optimale
 # 2020-2021
 
 [FAQ](https://codimd.math.cnrs.fr/s/pIaROB1YP)
