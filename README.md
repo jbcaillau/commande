@@ -3,7 +3,7 @@
 # Commande optimale
 # 2020-2021
 
-[Blog](https://caillau.blog/2020/10/03/commande)
+[FAQ](https://codimd.math.cnrs.fr/3un_fq8eQ72cdzpWslMxhg)
 
 [Plan du cours](cm/cm.pdf)
 ([notes 1](cm/notes1.pdf))
