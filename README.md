@@ -9,10 +9,11 @@
 ([notes 1](cm/notes1.pdf))
 ([notes 2](cm/notes2.pdf))
 ([notes 3](cm/notes3.pdf))
+([notes 4](cm/notes4.pdf))
 
 [Tir simple](https://gitlab.polytech.unice.fr/caillau/gallery/-/blob/master/examples/simple_shooting/simple_shooting.ipynb)
  
-[Exo 2](https://gitlab.polytech.unice.fr/caillau/gallery/-/blob/master/examples/exo2/exo2.ipynb)
+[Exo 2](https://gitlab.polytech.unice.fr/caillau/public/-/blob/master/foo/exo2.ipynb)
 
 [Exam CC (2019-20)](exam-cc-old/exam-cc.pdf)
 
