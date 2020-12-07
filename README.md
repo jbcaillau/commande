@@ -15,6 +15,8 @@
  
 [Exo 2](https://gitlab.polytech.unice.fr/caillau/public/-/blob/master/foo/exo2.ipynb)
 
+[Navigation problem](tp1/zmd.ipynb)
+
 [Exam CC (2019-20)](exam-cc-old/exam-cc.pdf)
 
 [Exam (2019-20)](exam-old/exam.pdf)
